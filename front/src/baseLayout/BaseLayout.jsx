@@ -67,22 +67,25 @@ const BaseLayout = ({children}) => {
         <div className="cookies-content">
             <p className="text-title">Usamos Cookies</p>
             <p id="nav-cookies">
-                Usamos cookies propias y de terceros para el funcionamiento del sitio, análisis estadístico.
-                Más información en nuestra <a href="https://nexefundacio.org/politica-de-cookies" rel="noopener noreferrer" >Política de Cookies</a>
+              Usamos cookies propias y de terceros para el funcionamiento del
+              sitio, análisis estadístico. Más información en nuestra{" "}
+              <a
+                href="https://nexefundacio.org/politica-de-cookies"
+                rel="noopener noreferrer"
+              >
+                Política de Cookies
+              </a>
             </p>
 
             <div className="cookies-buttons">
                 <button id="accept-cookies" className="btn-accept">Aceptar</button>
                 <button id="decline-cookies" className="btn-decline">Rechazar</button>
             </div>
+          </div>
         </div>
-    </div>
-</div>
-
-
-
+      </div>
     </>
-    );
+  );
 };
 
 export default BaseLayout;
