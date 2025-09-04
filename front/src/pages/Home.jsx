@@ -13,10 +13,18 @@ const Home = () => {
         <div class="flex justify-center">
           <Link
             to="/tablero"
-            className="text-xl bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-semibold px-4 py-2 rounded-full border-4 border-blue-700
-             hover:from-purple-500 hover:to-pink-400 transition"
+            className="relative group inline-block text-xl font-bold px-8 py-3 rounded-full border-4 border-blue-700 overflow-hidden transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-lg"
           >
-            Probar el Tablero
+            {/* Capa de gradiente con transición */}
+            <span className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-500 ease-in-out group-hover:from-pink-400 group-hover:to-purple-500"></span>
+
+            {/* Capa semi-transparente para mejorar contraste del texto */}
+            <span className="absolute inset-0 bg-white/10 group-hover:bg-black/10 transition-all duration-500 ease-in-out"></span>
+
+            {/* Texto encima */}
+            <span className=" text-white drop-shadow-md transition-colors duration-500 ease-in-out group-hover:text-white">
+              Probar el Tablero
+            </span>
           </Link>
         </div>
       </div>
