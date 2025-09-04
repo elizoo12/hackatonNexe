@@ -52,76 +52,6 @@
         }
     }
 
-/* ------------------------------------------------------------------------ Search-bar -----------------------------------------------------------------------------*/
-    
-    .searcher-row{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.382); /* Más suave */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-    opacity: 0;
-    height: 80px;
-    visibility: hidden;
-    transition: all 0.4s ease;
-    z-index: 999;
-    }
-    .searcher-row.active{
-        opacity: 1;
-        pointer-events: all;
-        visibility:visible;
-    }
-    .search-input-bar{
-        display: inline-block;
-        font-size: 16px;
-        border: 0;
-        outline:none; 
-        background:#fcfcfd;
-        width: 30%;
-        height: 45px;
-    }
-    .search-btn{
-        height: 45px;
-        font-size:16px;
-        border: 0;
-        background-color: #ffffff;
-        cursor: pointer;
-    }
-    /* ====== RESALTADO ====== */
-    .highlight{
-        animation: flash 2s ease forwards;
-        border-radius: 5px;
-    }
-    @keyframes flash{
-        0%{ background: #9994ef; }
-        
-    }
-
-    .close-btn {   
-        display: inline-block; 
-        position: fixed;
-        left: 95%;
-        background: transparent;
-        border: none;
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-        font-size: 25px;
-        cursor: pointer;
-        color: #fcfcfc;
-        z-index: 9998;
-}
-    .close-btn.active{
-        opacity: 1;
-        visibility: visible;
-        pointer-events: all;
-        &:hover{
-            transform: scale(1.1);
-        }
-    }
 
 /* <------------------------------------------------------------------------- nav-all-pages-----------------------------------------------------------------------> */
 
@@ -176,16 +106,14 @@
 
 .nav-all-pages-column a{
     display: block;
-    text-decoration: none;
+    text-decoration: underline;
     color: rgb(4, 4, 4);
     margin-top: 20px;
     font-size: 1.4rem;
     padding: 5px 15px;
-    border-bottom: 1px solid black;
-    width: 80%;
 
+    width: 80%;
     &:hover{
-        background-color: #9994ef;
         transform: scale(1.06);
         
     }
@@ -196,19 +124,15 @@
         .navbar-sticky{
             display: none;
             position: absolute;
-            
         }        
-
         .navbar-side{
             background-color: transparent;
             width: 300px;
             height: 1040px;
             margin-left: -240px;
             transition: 0.6s;
-
         }
         .navbar-side.active{
-
             box-shadow: 0 2px 10px 0 rgba(18,18,26,5);
             margin-left: 0px;
             background-color:rgb(255, 255, 255);
