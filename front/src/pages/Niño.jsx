@@ -48,8 +48,10 @@ const Niño = () => {
                 555-123-4567
               </p>
               <p>
-                <span className="font-semibold">Nombre del Especialista: </span>{" "}
-                Dr. Luis Gómez
+                <span className="font-semibold">
+                  Nombre de la Persona de Seguimiento:{" "}
+                </span>{" "}
+                Luis Gómez
               </p>
             </div>
 

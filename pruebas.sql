@@ -1,14 +1,14 @@
 insert into button (nombre, ruta_imagen,ruta_sonido)
 values ("asustado","images/asustado.webp","sounds/asustado.mp3"),
-("coche","coche.webp","sounds/enfadado.mp3"),
-("feliz","images/feliz.webp","sounds/futbol.mp3"),
-("futbol","images/futbol.webp","sounds/futbol.mp3"),
-("hamburguesa","images/hamburguesa.webp","sounds/hamburguesa.mp3"),
-("juego","images/juego.webp","sounds/juego.mp3"),
-("llorar","images/llorar.webp","sounds/llorar.mp3"),
-("manzana","images/manzana.webp","sounds/manzana.mp3"),
-("pizza","images/pizza.webp","sounds/pizza.mp3"),
-("retrete","images/retrete.webp","sounds/retrete.mp3"),
+("coche","coche.webp","no sound"),
+("feliz","images/feliz.webp","sounds/feliz.mp3"),
+("futbol","images/futbol.webp","no sound"),
+("hamburguesa","images/hamburguesa.webp","sounds/morder.mp3"),
+("juego","images/juego.webp","no sound"),
+("llorar","images/llorar.webp","sounds/miedo.mp3"),
+("manzana","images/manzana.webp","sounds/morder.mp3"),
+("pizza","images/pizza.webp","sounds/morder.mp3"),
+("retrete","images/retrete.webp","no sound"),
 ("tren","images/tren.webp","sounds/tren.mp3")
 
 INSERT INTO kid (id, tutor_id, descripcion, nombre) VALUES

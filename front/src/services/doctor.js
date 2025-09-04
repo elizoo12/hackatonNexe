@@ -1,20 +1,20 @@
 import {apiDoctor} from "./apiService";
 
-export const insertDoctor = (data) => {
+export const insertDoctor = async (data) => {
     return apiDoctor.post(`/`, data);
 }
 
-export const getDoctor = (id) =>{
+export const getDoctor = async (id) =>{
     return apiDoctor.get(`/${id}`);
 }
 
-export const updateDoctor = (id, data) => {
+export const updateDoctor = async (id, data) => {
     return apiDoctor.put(`/${id}`, data);
 }
 
-export const deleteDoctor = (id) => {
+export const deleteDoctor = async(id) => {
     return apiDoctor.delete(`/${id}`);
 }
-export const getDoctorKids = (id) => {
+export const getDoctorKids =async (id) => {
     return apiDoctor.get(`/${id}/kids`);
 }

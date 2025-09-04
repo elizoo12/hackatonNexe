@@ -3,6 +3,10 @@ import {apiKid} from "./apiService";
 export const insertKid = (data) => {
     return apiKid.post(`/`, data);
 }
+
+export const getKids =async () => {
+    return apiKid.get(`/`);
+}
 export const getKid = (id) => {
     return apiKid.get(`/${id}`);
 }
