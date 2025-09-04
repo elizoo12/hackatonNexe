@@ -1,16 +1,17 @@
-import api from "./apiService";
+
+
 export const insertTutor = (data) => {
-    return api.post(`/tutors`, data);
+    return apiTutor.post(`/tutors`, data);
 }
 export const getTutor = (id) => {
-    return api.get(`/tutors/${id}`);
+    return apiTutor.get(`/tutors/${id}`);
 }
 export const updateTutor = (id, data) => {
-    return api.put(`/tutors/${id}`, data);
+    return apiTutor.put(`/tutors/${id}`, data);
 }
 export const deleteTutor = (id) => {
-    return api.delete(`/tutors/${id}`);
+    return apiTutor.delete(`/tutors/${id}`);
 }
 export const getTutorKid = (id) => {
-    return api.get(`/tutors/${id}/kid`);
+    return apiTutor.get(`/tutors/${id}/kid`);
 }

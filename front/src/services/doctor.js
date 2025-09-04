@@ -1,20 +1,20 @@
-import api from "./apiService";
+
 
 export const insertDoctor = (data) => {
-    return api.post(`/`, data);
+    return apiDoctor.post(`/`, data);
 }
 
 export const getDoctor = (id) =>{
-    return api.get(`/${id}`);
+    return apiDoctor.get(`/${id}`);
 }
 
 export const updateDoctor = (id, data) => {
-    return api.put(`/${id}`, data);
+    return apiDoctor.put(`/${id}`, data);
 }
 
 export const deleteDoctor = (id) => {
-    return api.delete(`/${id}`);
+    return apiDoctor.delete(`/${id}`);
 }
 export const getDoctorKids = (id) => {
-    return api.get(`/${id}/kids`);
+    return apiDoctor.get(`/${id}/kids`);
 }

@@ -29,7 +29,6 @@ export const apiDoctor = axios.create({
 });
 
 
-export default api;
 
 
 
