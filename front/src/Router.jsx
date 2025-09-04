@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import Tablero from "./pages/Tablero";
 import Registro from "./pages/Registro";
 import Medico from "./pages/Medico";
+import Nino from "./pages/Niño";
 
 const Router = () => (
   <BrowserRouter>
@@ -13,6 +14,7 @@ const Router = () => (
       <Route path="/Tablero" element={<Tablero />} />
       <Route path="/Registro" element={<Registro />} />
       <Route path="/Medico" element={<Medico />} />
+      <Route path="/niño" element={<Nino />} />
     </Routes>
   </BrowserRouter>
 );
