@@ -1,5 +1,4 @@
-import {apiTutor} from "./apiService"
-
+import {apiTutor} from "./apiService";
 export const insertTutor = (data) => {
     apiTutor.post(`/`, data);
 }

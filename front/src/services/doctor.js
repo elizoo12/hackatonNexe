@@ -1,4 +1,4 @@
-
+import {apiDoctor} from "./apiService";
 
 export const insertDoctor = (data) => {
     return apiDoctor.post(`/`, data);

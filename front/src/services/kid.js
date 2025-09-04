@@ -1,4 +1,4 @@
-
+import {apiKid} from "./apiService";
 
 export const insertKid = (data) => {
     return apiKid.post(`/`, data);
