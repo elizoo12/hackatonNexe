@@ -4,7 +4,7 @@ import BaseLayout from "../baseLayout/BaseLayout";
 const Login = () => {
   return (
     <BaseLayout>
-      <div class="h-dvh flex items-center justify-center bg-gradient-to-br from-cyan-400 via-sky-500 to-blue-700 p-6">
+      <div class="h-dvh flex items-center justify-center bg-gradient-to-br from-[#CD5C1D] via-[#a84310] to-[#5c1d0a] p-6">
         <div class="flex flex-col bg-white/90 backdrop-blur-md text-gray-800 p-8 rounded-2xl shadow-2xl w-96 border border-blue-200">
           <h1 class="text-3xl font-bold text-center text-black mb-6">
             Bienvenido
@@ -32,7 +32,7 @@ const Login = () => {
           </form>
           <div class="mt-4 w-full text-xl flex justify-center">
             <Link to="/registro">
-              ¿Sin cuenta? <span class="font-bold underline">Regístarte</span>
+              ¿Sin cuenta? <span class="font-bold underline">Regístrate</span>
             </Link>
           </div>
         </div>
