@@ -2,10 +2,12 @@ package com.fundacioNexe.webApi.controllers;
 
 
 import com.fundacioNexe.webApi.entities.Doctor;
+import com.fundacioNexe.webApi.entities.Kid;
 import com.fundacioNexe.webApi.repositories.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.print.Doc;
 import java.util.List;
 
 @CrossOrigin // Para hacer peticiones desde otro servidor
@@ -20,6 +22,12 @@ public class DoctorController {
     @GetMapping("/")
     public List<Doctor> getDoctors(){
         return doctorRepository.findAll();
+    }
+
+    @GetMapping("/{id}/kid")
+    public List<Kid> getKidsFromDoctor(@PathVariable("id")int id){
+        Doctor d = doctorRepository.getReferenceById(id);
+        return d.getKidsCaredFor();
     }
 
 

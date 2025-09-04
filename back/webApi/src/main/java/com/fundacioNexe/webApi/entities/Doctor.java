@@ -13,6 +13,9 @@ public class Doctor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String nombre;
+    private String contraseña;
+
     @ManyToMany
     private List<Kid> kidsCaredFor;
 
