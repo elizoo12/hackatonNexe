@@ -21,6 +21,7 @@ const BaseLayout = ({children}) => {
         <div >
             <div className="nav-all-pages-column">
                 <Link to={"/Login"} >Login</Link>
+                <Link to="/Tablero">Usar el Tablero</Link>
             </div>
         </div>
 
@@ -38,6 +39,7 @@ const BaseLayout = ({children}) => {
     <div className="nav-all-pages">
         <div className="nav-all-pages-column">
             <Link to={"/Login"} >Login</Link>
+            <Link to="/Tablero">Usar el Tablero</Link>
         </div>
             
     </div>
