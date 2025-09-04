@@ -16,7 +16,7 @@
         }
     .nameBrand{
         display: inline-block;
-        margin: auto;
+        margin-left: 80px;
         color: white;
         font-size: 3rem;
         letter-spacing: 0.1ch;
