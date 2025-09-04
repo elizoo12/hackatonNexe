@@ -1,0 +1,452 @@
+        body{
+            margin: 0;
+            font-family: 'MineFontBody', sans-serif;
+            font-weight: 400; /* Puedes usar cualquier peso entre 100-900 */
+    }
+    header{
+            position: sticky;
+            top: 0;
+            z-index: 999;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+        height: 80px;
+        }
+    .nameBrand{
+        display: inline-block;
+        margin: auto;
+        color: white;
+        font-size: 3rem;
+        letter-spacing: 0.1ch;
+        font-weight: 200;
+        text-decoration: none;
+    }
+    .nav-right{
+        display: flex;
+        gap: 20px;
+        padding-right: 10px;
+        align-items: center;
+    }
+    .nav-right.active{
+        display: none;
+    }
+    .nav-right img{
+        height: 40px;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+    .nav-right a{
+        font-size: 19px;
+        color: rgb(253, 253, 253);
+        letter-spacing:0.1ch;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover{
+            background-color: white;
+            color: black;
+            padding: 5px;
+        }
+    }
+
+/* ------------------------------------------------------------------------ Search-bar -----------------------------------------------------------------------------*/
+    
+    .searcher-row{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.382); /* Más suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    height: 80px;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 999;
+    }
+    .searcher-row.active{
+        opacity: 1;
+        pointer-events: all;
+        visibility:visible;
+    }
+    .search-input-bar{
+        display: inline-block;
+        font-size: 16px;
+        border: 0;
+        outline:none; 
+        background:#fcfcfd;
+        width: 30%;
+        height: 45px;
+    }
+    .search-btn{
+        height: 45px;
+        font-size:16px;
+        border: 0;
+        background-color: #ffffff;
+        cursor: pointer;
+    }
+    /* ====== RESALTADO ====== */
+    .highlight{
+        animation: flash 2s ease forwards;
+        border-radius: 5px;
+    }
+    @keyframes flash{
+        0%{ background: #9994ef; }
+        
+    }
+
+    .close-btn {   
+        display: inline-block; 
+        position: fixed;
+        left: 95%;
+        background: transparent;
+        border: none;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        font-size: 25px;
+        cursor: pointer;
+        color: #fcfcfc;
+        z-index: 9998;
+}
+    .close-btn.active{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+/* <------------------------------------------------------------------------- nav-all-pages-----------------------------------------------------------------------> */
+
+.btn-all-pages{
+        font-size: 19px;
+        color: rgb(253, 253, 253);
+        letter-spacing:0.1ch;
+        cursor: pointer;
+        text-decoration: none;
+}
+.btn-all-pages.active{
+        background-color: white;
+        color: black;
+        padding: 5px;
+}
+.nav-all-pages{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+    gap: 5%;
+    top: 80px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 10px -5px black;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+    transition: 0.5s;
+
+}
+.nav-all-pages.active{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    height: 300px;
+}
+
+.nav-all-pages-column p{
+    font-size: 22px;
+    letter-spacing: 0.1ch;
+    margin: 0;
+}
+.nav-all-pages-column img{
+    margin-top: 10px;
+    height: 80px;
+    width: 110px;
+}
+
+.nav-all-pages-column a{
+    display: block;
+    text-decoration: none;
+    color: rgb(4, 4, 4);
+    margin-top: 20px;
+    font-size: 1.4rem;
+    padding: 5px 15px;
+    border-bottom: 1px solid black;
+    width: 80%;
+
+    &:hover{
+        background-color: #9994ef;
+        transform: scale(1.06);
+        
+    }
+}
+
+/* <!---------------------------------------------------------- navbar sticky -------------------------------------------------------------> */
+
+        .navbar-sticky{
+            display: none;
+            position: absolute;
+            
+        }        
+
+        .navbar-side{
+            background-color: transparent;
+            width: 300px;
+            height: 1040px;
+            margin-left: -240px;
+            transition: 0.6s;
+
+        }
+        .navbar-side.active{
+
+            box-shadow: 0 2px 10px 0 rgba(18,18,26,5);
+            margin-left: 0px;
+            background-color:rgb(255, 255, 255);
+            
+        }
+        .navbar-side.active .hamburguer .rotate90{
+            transition: 0.5s;
+            transform: rotate(90deg);
+            border: 2.5px solid black;
+            width: 14px;
+            margin-left: 13px;
+        }
+        .navbar-side.active .hamburguer .rotate45{
+            transform: rotate(35deg);
+            width: 40px;
+            margin-left: 0px;
+            border: 2.5px solid black;
+            z-index: 999;
+        }
+        
+        .hamburguer{
+            padding-top: 15px;
+            margin-left:255px;
+            width: 35px;
+            cursor: pointer;
+            transition: 0.7s;
+        }
+        .hamburguer  p{
+                width: 27px;
+                margin: 7px;
+                border: 2.5px solid white;
+                border-radius: 10px;
+                height: 0;
+        }
+        .hamburguer:hover{
+            transform: scale(1.1);
+        }
+
+
+
+/* <------------------------------------------------------------------------------- footer -------------------------------------------------------------------------> */
+
+.footer{
+    background-color: black;
+}
+.nameBrandFooter{
+    text-align: center;
+    
+}
+.nameBrandFooter a{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 0.1ch;
+    font-weight: 200;
+    margin-top: 65px;
+    margin-bottom: 50px;
+}
+.row-info{
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+.row-info a{
+    color: white;
+    text-decoration: none;
+    border-right: 2px solid white;
+    padding-right: 10px;
+    padding: 5px;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+.policy-divulgation{
+    color: rgba(255, 255, 255, 0.571);
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+.policy-divulgation a{
+    text-decoration: none;
+    color: rgb(205, 195, 1);
+    font-weight: 600;
+    font-size: 22px;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+/* <------------------------------------------------------------------------------- Banner-------------------------------------------------------------------------> */
+
+.cookies-overlay {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 9998;
+}
+
+/* Mostrar overlay */
+.cookies-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+}
+
+/* Modal */
+.cookies-banner {
+    background: #0c0c0ced;
+    padding: 10px 15px;
+    width: 100%;
+    transform: translateY(20px);
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.6s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Mostrar modal */
+.cookies-overlay.active .cookies-banner {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+    
+}
+
+/* Título */
+.cookies-banner .text-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 5px;
+    color: #ffffff;
+}
+
+/* Texto */
+.cookies-content p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 5px;
+    color: #ffffff;
+    letter-spacing: 0.1ch;
+}
+
+/* Enlaces */
+.cookies-content a {
+    color: #fbe606;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cookies-content a:hover {
+    text-decoration: underline;
+}
+
+.cookies-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.cookies-buttons button {
+    padding: 10px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    width: 20%;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    background-color: #f9f7f7;
+    color: rgb(12, 12, 12);
+    &:hover{
+        background-color: #9994ef;
+        transform: translateY(-3px);
+    }
+}
+
+
+
+/* --------------------------------------------------------------- media query -------------------------------------------- */
+
+@media (max-width: 700px){
+
+.navbar .nav-right{
+    display: none;
+}
+.navbar .navbar-sticky{
+    display: block;
+}
+
+.nav-all-pages-column a{
+    margin-top: 10px;
+    width: 70%;
+}
+
+.cookies-buttons button{
+    font-size: 0.9rem;
+    width: 35%;
+}
+
+}
+
+@media (max-width: 500px){
+
+    .footer .row-info{
+        display: block;
+        text-align: center;
+    }
+    .footer .row-info a{
+        margin: 10px;
+        display: block;
+        border-right: 0px;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    .footer .policy-divulgation a{
+        font-size: 18px;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+@media (max-width: 370px){
+
+.cookies-buttons button{
+    font-size: 0.9rem;
+    width: 35%;
+}
+
+}
