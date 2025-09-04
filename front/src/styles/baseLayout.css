@@ -93,6 +93,9 @@
     height: 300px;
 }
 
+.nav-all-pages-column{
+    width: 100%;
+}
 .nav-all-pages-column p{
     font-size: 22px;
     letter-spacing: 0.1ch;
@@ -345,7 +348,12 @@
 }
 
 @media (max-width: 500px){
-
+    h1{
+        font-size: 3.2rem;
+    }
+    .nameBrand{
+        font-size: 2rem;
+    }
     .footer .row-info{
         display: block;
         text-align: center;
@@ -367,7 +375,12 @@
 }
 
 @media (max-width: 370px){
-
+        h1{
+        font-size: 3.0rem;
+    }
+    .nameBrand{
+        font-size: 1.5rem;
+    }
 .cookies-buttons button{
     font-size: 0.9rem;
     width: 35%;
