@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Tablero from "./pages/Tablero";
 import Registro from "./pages/Registro";
+import Medico from "./pages/Medico";
 
 const Router = () => (
   <BrowserRouter>
@@ -11,6 +12,7 @@ const Router = () => (
       <Route path="/Login" element={<Login />} />
       <Route path="/Tablero" element={<Tablero />} />
       <Route path="/Registro" element={<Registro />} />
+      <Route path="/Medico" element={<Medico />} />
     </Routes>
   </BrowserRouter>
 );

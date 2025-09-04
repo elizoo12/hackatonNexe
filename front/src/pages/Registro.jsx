@@ -43,7 +43,7 @@ const Registro = () => {
 
           <div className="mt-4 w-full text-xl flex justify-center">
             <Link to="/login">
-              ¿Ya tienes cuenta?
+              ¿Ya tienes cuenta?<span> </span>
               <span className="font-bold underline">Inicia sesión</span>
             </Link>
           </div>
