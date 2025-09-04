@@ -12,6 +12,7 @@ public class Tutor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private String contraseña;
     private String gmail;
     @OneToOne
     private Kid kid;
