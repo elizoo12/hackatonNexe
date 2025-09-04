@@ -1,14 +1,14 @@
-import api from "./apiService";
+import {apiButton} from "./apiService";
 
-export const insertButton = (data) => {
-    return api.post(`/`, data);
+export const insertButton = async (data) => {
+    return apiButton.post(`/`, data);
 }
-export const getButton = (id) => {
-    return api.get(`/${id}`);
+export const getButton = async () => {
+    return apiButton.get("/");
 }
-export const updateButton = (id, data) => {
-    return api.put(`/${id}`, data);
+export const updateButton = async (id, data) => {
+    return apiButton.put(`/${id}`, data);
 }
-export const deleteButton = (id) => {
-    return api.delete(`/${id}`);
+export const deleteButton = async (id) => {
+    return apiButton.delete(`/${id}`);
 }
