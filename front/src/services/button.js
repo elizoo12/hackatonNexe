@@ -1,14 +1,14 @@
 import api from "./apiService";
 
 export const insertButton = (data) => {
-    return api.post(`/buttons`, data);
+    return api.post(`/`, data);
 }
 export const getButton = (id) => {
-    return api.get(`/buttons/${id}`);
+    return api.get(`/${id}`);
 }
 export const updateButton = (id, data) => {
-    return api.put(`/buttons/${id}`, data);
+    return api.put(`/${id}`, data);
 }
 export const deleteButton = (id) => {
-    return api.delete(`/buttons/${id}`);
+    return api.delete(`/${id}`);
 }

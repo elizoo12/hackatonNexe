@@ -1,9 +1,7 @@
 package com.fundacioNexe.webApi.controllers;
 
 
-import com.fundacioNexe.webApi.entities.Kid;
 import com.fundacioNexe.webApi.entities.Tutor;
-import com.fundacioNexe.webApi.repositories.KidRepository;
 import com.fundacioNexe.webApi.repositories.TutorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
