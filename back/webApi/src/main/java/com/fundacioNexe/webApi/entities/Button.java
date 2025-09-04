@@ -22,6 +22,4 @@ public class Button {
     @ManyToMany
     private List<Kid> kidsUsing;
 
-
-
 }

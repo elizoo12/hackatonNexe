@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../styles/tablero.css"
 import { getButton } from "../services/button";
 import "../styles/tablero.css";
@@ -7,6 +7,7 @@ import BaseLayout from "../baseLayout/BaseLayout";
 const Tablero = () => {
 
     const [listButton, setListButton] = useState([]);
+    const audioRef=useRef();
 
 
     useEffect(()=> {
@@ -29,13 +30,13 @@ const Tablero = () => {
             </header>
 
             <div className="tablero" >
-
+                      
                 {listButton.map((data) => (
-                    <div className="box" key={data.id}>
+                    <div className="box" key={data.id} onClick={(e) => {e.currentTarget.querySelector("audio").play();}}>
 
-                    <img src={"http://localhost:8080/" + data.rutaImagen} alt="" />
+                    <img src={"http://localhost:8083/" + data.rutaImagen} alt="" />
                     <p>{data.nombre}</p> 
-
+                    <audio src={"http://localhost:8083/" + data.rutaSonido}></audio>
                     </div>
                 ))}
 

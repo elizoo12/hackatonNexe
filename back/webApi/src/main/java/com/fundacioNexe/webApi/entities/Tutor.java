@@ -14,8 +14,7 @@ public class Tutor {
     private String name;
     private String contraseña;
     private String gmail;
-    @OneToOne
-    private Kid kid;
+ 
 
 
 }
