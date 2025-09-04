@@ -14,10 +14,8 @@ import java.util.List;
 @RequestMapping("/button")
 public class ButtonController {
 
-
     @Autowired
     private ButtonRepository buttonRepository;
-
 
     @GetMapping("/")
     public List<Button> getButton(){
