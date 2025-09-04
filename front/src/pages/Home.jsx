@@ -16,11 +16,11 @@ const Home = () => {
           </div>
           <div class="flex justify-center">
             <Link
-              to="/tablero"
+              to="/Tablero"
               className="text-xl bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-semibold px-4 py-2 rounded-full border-4 border-blue-700
             hover:from-purple-500 hover:to-pink-400 transition"
             >
-              Probar el Tablero
+              Usar el Tablero
             </Link>
           </div>
         </div>
