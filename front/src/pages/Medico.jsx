@@ -1,8 +1,13 @@
-import { Link } from "react-router-dom";
 import BaseLayout from "../baseLayout/BaseLayout";
 import descargaImg from "../img/descarga.png";
 
 const Medico = () => {
+
+
+  const [kids,setKids]=useState();
+
+
+
   return (
     <BaseLayout>
       <div className="h-dvh flex flex-col items-center bg-gradient-to-br from-[#CD5C1D] via-[#a84310] to-[#5c1d0a] p-6 gap-8">
