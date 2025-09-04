@@ -10,7 +10,7 @@ import java.util.List;
 
 @CrossOrigin // Para hacer peticiones desde otro servidor
 @RestController // Para hacer peticiones REST
-@RequestMapping("/nexe")
+@RequestMapping("/doc")
 public class basicController {
 
     @GetMapping("/")
