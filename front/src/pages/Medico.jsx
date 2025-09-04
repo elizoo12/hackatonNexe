@@ -1,12 +1,17 @@
+import { useEffect, useState } from "react";
 import BaseLayout from "../baseLayout/BaseLayout";
 import descargaImg from "../img/descarga.png";
+import { getKids } from "../services/kid";
+import { Link } from "react-router-dom";
 
 const Medico = () => {
+  const [kids, setKids] = useState();
 
-
-  const [kids,setKids]=useState();
-
-
+  useEffect(() => {
+    getKids().then((data) => {
+      setKids(data.data);
+    });
+  });
 
   return (
     <BaseLayout>
@@ -15,24 +20,29 @@ const Medico = () => {
           <h1 className="text-4xl font-bold text-center text-gray-800 mb-6">
             Listado de Usuarios
           </h1>
+
           <div className="flex flex-col gap-4">
-            <div className="flex items-center justify-between bg-gray-100 rounded-xl p-4 shadow hover:shadow-lg transition">
-              <div className="flex items-center gap-4">
-                <img
-                  src={descargaImg}
-                  className="w-16 h-16 rounded-full object-cover"
-                />
-                <h2 className="text-xl font-semibold text-gray-800">
-                  Nombre del Usuario
-                </h2>
-              </div>
-              <Link
-                to="/niño"
-                className="bg-gradient-to-r from-[#FF7F50] to-[#FF4500] text-white px-4 py-2 rounded-full font-semibold border-2 border-[#a84310] hover:from-[#FF6347] hover:to-[#FF8C00] transition"
-              >
-                Ir al Perfil
-              </Link>
-            </div>
+            {kids?.map((kid) => {
+              return (
+                <div className="flex items-center justify-between bg-gray-100 rounded-xl p-4 shadow hover:shadow-lg transition">
+                  <div className="flex items-center gap-4">
+                    <img
+                      src={descargaImg}
+                      className="w-16 h-16 rounded-full object-cover"
+                    />
+                    <h2 className="text-xl font-semibold text-gray-800">
+                      {kid.nombre}
+                    </h2>
+                  </div>
+                  <Link
+                    to={"/niño" + kid.id}
+                    className="bg-gradient-to-r from-[#FF7F50] to-[#FF4500] text-white px-4 py-2 rounded-full font-semibold border-2 border-[#a84310] hover:from-[#FF6347] hover:to-[#FF8C00] transition"
+                  >
+                    Ir al Perfil
+                  </Link>
+                </div>
+              );
+            })}
 
             <div className="flex items-center justify-between bg-gray-100 rounded-xl p-4 shadow hover:shadow-lg transition">
               <div className="flex items-center gap-4">
